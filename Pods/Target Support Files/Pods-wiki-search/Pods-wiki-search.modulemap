@@ -1,0 +1,6 @@
+framework module Pods_wiki_search {
+  umbrella header "Pods-wiki-search-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="WikipediaSearchCell" id="KGk-i7-Jjw" customClass="WikipediaSearchCell" customModule="wiki_search" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="599" height="194"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="599" height="194"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aQf-OU-Nxu" userLabel="url">
+                        <rect key="frame" x="10" y="55" width="578" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="dVk-5a-sWq">
+                        <rect key="frame" x="10" y="84" width="578" height="102"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ySv-zd-5i5">
+                            <size key="itemSize" width="128" height="128"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                    </collectionView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JAB-15-v0R" userLabel="title">
+                        <rect key="frame" x="10" y="26" width="578" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="dVk-5a-sWq" firstAttribute="top" secondItem="aQf-OU-Nxu" secondAttribute="bottom" constant="8" symbolic="YES" id="0Xc-vn-jUV"/>
+                    <constraint firstItem="dVk-5a-sWq" firstAttribute="leading" secondItem="aQf-OU-Nxu" secondAttribute="leading" id="4G9-mU-kxa"/>
+                    <constraint firstItem="dVk-5a-sWq" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.525773" id="Bs4-fe-IOM"/>
+                    <constraint firstItem="aQf-OU-Nxu" firstAttribute="leading" secondItem="JAB-15-v0R" secondAttribute="leading" id="CBD-lB-Ke2"/>
+                    <constraint firstAttribute="trailing" secondItem="JAB-15-v0R" secondAttribute="trailing" constant="11" id="Hk6-gE-pPs"/>
+                    <constraint firstItem="dVk-5a-sWq" firstAttribute="width" secondItem="aQf-OU-Nxu" secondAttribute="width" id="I9U-Fg-hi3"/>
+                    <constraint firstItem="dVk-5a-sWq" firstAttribute="trailing" secondItem="aQf-OU-Nxu" secondAttribute="trailing" id="JqT-Jy-NqQ"/>
+                    <constraint firstItem="aQf-OU-Nxu" firstAttribute="top" secondItem="JAB-15-v0R" secondAttribute="bottom" constant="8" symbolic="YES" id="MHp-2G-9db"/>
+                    <constraint firstItem="JAB-15-v0R" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="ghc-Mr-fPK"/>
+                    <constraint firstItem="JAB-15-v0R" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="26" id="iuR-F4-nch"/>
+                    <constraint firstItem="aQf-OU-Nxu" firstAttribute="trailing" secondItem="JAB-15-v0R" secondAttribute="trailing" id="mgb-JN-1WS"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="URLOutlet" destination="aQf-OU-Nxu" id="20z-dU-E6C"/>
+                <outlet property="imageOutLet" destination="dVk-5a-sWq" id="QWT-BV-8du"/>
+                <outlet property="titleOutlet" destination="JAB-15-v0R" id="Z5c-gh-4Pw"/>
+            </connections>
+            <point key="canvasLocation" x="54.347826086956523" y="55.580357142857139"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
